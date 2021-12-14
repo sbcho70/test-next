@@ -43,6 +43,8 @@ export const Wrapper = styled.div`
         }
 
         .input-area {
+            /* Auto Layout */
+
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -54,24 +56,52 @@ export const Wrapper = styled.div`
             left: 0px;
             top: 110.91px;
             
+            
+            /* Inside Auto Layout */
+            
             flex: none;
             order: 2;
             align-self: stretch;
             flex-grow: 0;
             margin: 24px 0px;
 
-            .input-wrap {
+            .text-input {
                 position: static;
                 width: 375px;
                 left: calc(50% - 375px/2);
+                height: 50%;
 
                 flex: none;
                 align-self: stretch;
                 flex-grow: 0;
                 margin: 0px 0px;
 
-                label {
-                    position: absolute;
+                input[type="text"] {
+                    height: 20px;
+                    left: 16px;
+                    right: 16px;
+                    top: 34px;
+
+                    /* Title 3 */
+
+                    font-family: Noto Sans KR;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 142%;
+                    /* identical to box height, or 20px */
+
+                    letter-spacing: -0.025em;
+                    font-feature-settings: 'kern' off;
+
+                    /* White / 40 */
+                }
+
+                input[type="text"]::placeholder {
+                    color: rgba(255, 255, 255, 0.4);
+                }
+
+                .label-area {
                     height: 16px;
                     left: 0px;
                     right: 0px;
@@ -92,30 +122,6 @@ export const Wrapper = styled.div`
                     /* White / 60 */
 
                     color: rgba(255, 255, 255, 0.6);
-                }
-
-                input[type="text"]::placeholder {
-                    position: absolute;
-                    height: 20px;
-                    left: 16px;
-                    right: 16px;
-                    top: 34px;
-
-                    /* Title 3 */
-
-                    font-family: Noto Sans KR;
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 14px;
-                    line-height: 142%;
-                    /* identical to box height, or 20px */
-
-                    letter-spacing: -0.025em;
-                    font-feature-settings: 'kern' off;
-
-                    /* White / 40 */
-
-                    color: rgba(255, 255, 255, 0.4);
                 }
             }
         }
